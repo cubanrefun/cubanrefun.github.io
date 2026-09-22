@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GTA5正版官方信息查询平台，提供Rockstar Games旗下侠盗猎车手5的官方购买渠道、版本介绍、游戏特色、配置要求及正版注册指南。">
+    <meta name="keywords" content="GTA5正版,侠盗猎车手5,侠盗猎车手5官方,Grand Theft Auto V,侠盗猎车手5下载,侠盗猎车手5价格">
+    <title>GTA5正版-侠盗猎车手5官方购买与注册指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e91e63;
+            --secondary-color: #212121;
+            --accent-color: #00bcd4;
+            --bg-light: #f5f5f5;
+            --text-main: #333333;
+            --text-light: #757575;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            color: var(--primary-color);
+        }
+
+        .header-cta {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .header-cta:hover {
+            background-color: #c2185b;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            color: #fff;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://picsum.photos/seed/gtavcity/1920/600.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 15px;
+            background: rgba(233, 30, 99, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Platform Section */
+        .platform-section {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .platform-item {
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .platform-item:hover {
+            background-color: rgba(255,255,255,0.05);
+            border-color: var(--primary-color);
+        }
+
+        .platform-item h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .platform-item p {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* Buying Guide */
+        .guide-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .guide-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .guide-sidebar {
+            flex: 0 0 300px;
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .guide-steps {
+            counter-reset: step;
+        }
+
+        .step-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 25px;
+        }
+
+        .step-item::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .step-item h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .step-item p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .sidebar-box h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .sidebar-list a {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #888;
+            padding: 40px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h5 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .guide-sidebar {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>GTA</span>5官方指南
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#features">游戏特色</a></li>
+                    <li><a href="#buying">购买指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#buying" class="header-cta">立即购买</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <h1>自由、犯罪与梦想<br>在洛圣都重新开始</h1>
+                <p>体验开放世界中规模最大的冒险。驾驶豪车，施展飞车特技，体验《侠盗猎车手5》的史诗级叙事与多人在线模式。</p>
+                <div class="hero-buttons">
+                    <a href="#buying" class="btn btn-primary">查看正版价格</a>
+                    <a href="#features" class="btn btn-outline">了解游戏特色</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="container">
+            <div class="section-title">
+                <h2>为什么选择正版GTA5</h2>
+                <p>支持官方开发，确保最佳的游戏体验与安全</p>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>安全防作弊</h3>
+                    <p>正版游戏受Rockstar Games Live服务保护，有效防止黑客入侵与数据篡改，享受公平竞技环境。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>持续更新内容</h3>
+                    <p>购买正版可免费体验DLC（如洛圣都故事、犯罪集团等）及定期的大型版本更新，内容永不过时。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>在线经济保障</h3>
+                    <p>官方商城购买的游戏币与点券绝对安全，避免因非法交易导致的账号封禁与资产损失。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>完整功能解锁</h3>
+                    <p>正版版本完整支持PC端的高级画质设置（如4K、光线追踪）及所有联机功能，无任何限制。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Platforms Section -->
+        <section class="platform-section">
+            <div class="container">
+                <div class="section-title" style="color: #fff;">
+                    <h2 style="color: #fff;">全平台支持</h2>
+                    <p style="color: #aaa;">跨平台游玩与数据互通</p>
+                </div>
+                <div class="platform-grid">
+                    <div class="platform-item">
+                        <h4>PlayStation</h4>
+                        <p>PS4 / PS5 主机</p>
+                    </div>
+                    <div class="platform-item">
+                        <h4>Xbox</h4>
+                        <p>Xbox One / Series X|S</p>
+                    </div>
+                    <div class="platform-item">
+                        <h4>PC</h4>
+                        <p>Steam / Epic Games</p>
+                    </div>
+                    <div class="platform-item">
+                        <h4>Mobile</h4>
+                        <p>iOS / Android (云游戏)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buying Guide Section -->
+        <section id="buying" class="container">
+            <div class="section-title">
+                <h2>GTA5正版购买指南</h2>
+                <p>了解如何获取安全可靠的数字版游戏</p>
+            </div>
+            <div class="guide-container">
+                <div class="guide-content">
+                    <article class="step-item">
+                        <h3>1. 选择官方或授权平台</h3>
+                        <p>访问Steam、Epic Games Store、PlayStation Store或Xbox Store。这些平台直接与发行商Rockstar Games合作，确保交易安全。</p>
+                    </article>
+                    <article class="step-item">
+                        <h3>2. 选择版本类型</h3>
+                        <p>通常分为《侠盗猎车手5》标准版（约298元）和《侠盗猎车手5：豪华版》（包含主线及两季DLC）。豪华版适合希望体验完整内容的玩家。</p>
+                    </article>
+                    <article class="step-item">
+                        <h3>3. 创建账号并支付</h3>
+                        <p>使用实名认证的账号进行购买。PC端支持信用卡、支付宝、微信支付等多种方式。购买后游戏将永久添加至您的数字库中。</p>
+                    </article>
+                    <article class="step-item">
+                        <h3>4. 下载与安装</h3>
+                        <p>购买完成后，在游戏库中点击“安装”，游戏文件会自动下载至本地。首次启动需联网验证，随后即可离线游玩。</p>
+                    </article>
+                </div>
+                <aside class="guide-sidebar">
+                    <div class="sidebar-box">
+                        <h4>推荐资源</h4>
+                        <ul class="sidebar-list">
+                            <li><a href="#">Rockstar Games 官网</a></li>
+                            <li><a href="#">Steam 商店链接</a></li>
+                            <li><a href="#">Epic Games 免费领取记录</a></li>
+                            <li><a href="#">GTA Online 新手教程</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box" style="margin-top: 20px;">
+                        <h4>注意事项</h4>
+                        <ul class="sidebar-list">
+                            <li>警惕非官方低价渠道</li>
+                            <li>切勿购买来路不明的激活码</li>
+                            <li>保管好您的账号密码</li>
+                            <li>谨防钓鱼网站</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container" style="padding-bottom: 60px;">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+                <p>关于GTA5正版的常见疑惑</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="border-bottom: 1px solid #eee; padding: 15px 0;">
+                    <h3 style="font-size: 18px; margin-bottom: 5px;">Q: 购买后可以换设备游玩吗？</h3>
+                    <p style="color: var(--text-light); font-size: 14px;">A: 可以。只要使用相同的Rockstar Games Launcher账号登录，即可在不同设备上同步游戏进度和存档。</p>
+                </div>
+                <div style="border-bottom: 1px solid #eee; padding: 15px 0;">
+                    <h3 style="font-size: 18px; margin-bottom: 5px;">Q: GTA5 Online需要额外付费吗？</h3>
+                    <p style="color: var(--text-light); font-size: 14px;">A: 不需要。购买正版GTA5后，即可免费体验GTA Online联机模式，但游戏内购买物品需要充值微交易。</p>
+                </div>
+                <div style="border-bottom: 1px solid #eee; padding: 15px 0;">
+                    <h3 style="font-size: 18px; margin-bottom: 5px;">Q: 旧版存档如何迁移到新版？</h3>
+                    <p style="color: var(--text-light); font-size: 14px;">A: 正版玩家在更新游戏时，系统通常会自动提示存档迁移。请确保在更新前登录了您的Rockstar账号。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5>GTA5官方指南</h5>
+                    <p>致力于为玩家提供最准确、最安全的正版购买信息与游戏资讯。拒绝盗版，支持正版游戏产业。</p>
+                </div>
+                <div class="footer-col">
+                    <h5>快速链接</h5>
+                    <ul>
+                        <li><a href="#home">回到首页</a></li>
+                        <li><a href="#features">游戏特色</a></li>
+                        <li><a href="#buying">购买指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>支持平台</h5>
+                    <ul>
+                        <li><a href="#">Steam 客户端</a></li>
+                        <li><a href="#">Rockstar Games Launcher</a></li>
+                        <li><a href="#">PlayStation Store</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 GTA5官方指南. 本站为非官方网站，仅提供信息参考。Rockstar Games是Rockstar Games的注册商标。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
