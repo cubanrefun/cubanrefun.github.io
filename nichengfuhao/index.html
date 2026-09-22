@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="昵称符号大全，提供QQ、微信、游戏、社交平台专用的个性符号、特殊字符、花字素材。包含情侣网名、分组符号、头像边框及创意昵称生成器。">
+    <meta name="keywords" content="昵称符号,QQ昵称,微信昵称,特殊符号,花字,网名符号,情侣网名">
+    <title>昵称符号-个性网名与社交平台符号素材库</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --primary-hover: #5649c0;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-secondary: #636e72;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 8px 16px 8px 36px;
+            border-radius: 20px;
+            border: 1px solid #e0e0e0;
+            background: #f1f3f5;
+            outline: none;
+            width: 200px;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            background: #fff;
+            border-color: var(--primary-color);
+            width: 240px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .hero-tag:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* 分类导航 */
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .cat-btn {
+            padding: 10px 24px;
+            border: none;
+            background: white;
+            border-radius: 50px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: all 0.2s;
+        }
+
+        .cat-btn:hover, .cat-btn.active {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* 符号网格 */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .symbols-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .symbol-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .symbol-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 20px rgba(108, 92, 231, 0.15);
+        }
+
+        .symbol-text {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            word-break: break-all;
+            line-height: 1.2;
+        }
+
+        .symbol-name {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .copy-hint {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(108, 92, 231, 0.9);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-weight: 600;
+        }
+
+        .symbol-card:hover .copy-hint {
+            opacity: 1;
+        }
+
+        /* 功能区域 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-item {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* 使用说明 */
+        .guide-section {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .guide-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-num {
+            background: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 40px 0 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #636e72;
+            color: #636e72;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .symbols-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+
+            .search-box {
+                display: none; /* 移动端简化隐藏搜索框 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">✨ <span>符号库</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">QQ符号</a></li>
+                    <li><a href="#">微信符号</a></li>
+                    <li><a href="#">游戏符号</a></li>
+                    <li><a href="#">情侣网名</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="搜索符号...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>寻找独特的个性符号</h1>
+                <p>为您的QQ、微信、游戏账号增添个性与魅力，海量特殊字符、花字素材一键复制。</p>
+                <div class="hero-tags">
+                    <div class="hero-tag">✨ 花字素材</div>
+                    <div class="hero-tag">💜 情侣网名</div>
+                    <div class="hero-tag">🔥 热门符号</div>
+                    <div class="hero-tag">🖼️ 头像框</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="category-nav">
+                <button class="cat-btn active">全部符号</button>
+                <button class="cat-btn">爱心/红心</button>
+                <button class="cat-btn">星星/月亮</button>
+                <button class="cat-btn">箭头/线条</button>
+                <button class="cat-btn">几何/方块</button>
+                <button class="cat-btn">中英文符号</button>
+            </div>
+
+            <h2 class="section-title">精选符号推荐</h2>
+            <div class="symbols-grid" id="symbolsGrid">
+                <!-- 符号卡片将通过JS生成，但为了SEO和首屏展示，这里预置部分静态内容 -->
+                <div class="symbol-card" onclick="copyToClipboard('✧')">
+                    <div class="symbol-text">✧</div>
+                    <div class="symbol-name">星星符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('❀')">
+                    <div class="symbol-text">❀</div>
+                    <div class="symbol-name">花叶符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('☪')">
+                    <div class="symbol-text">☪</div>
+                    <div class="symbol-name">新月符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('✿')">
+                    <div class="symbol-text">✿</div>
+                    <div class="symbol-name">花朵符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('❁')">
+                    <div class="symbol-text">❁</div>
+                    <div class="symbol-name">花蕊符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♔')">
+                    <div class="symbol-text">♔</div>
+                    <div class="symbol-name">皇冠符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♕')">
+                    <div class="symbol-text">♕</div>
+                    <div class="symbol-name">王后符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♖')">
+                    <div class="symbol-text">♖</div>
+                    <div class="symbol-name">战车符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♗')">
+                    <div class="symbol-text">♗</div>
+                    <div class="symbol-name">主教符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♘')">
+                    <div class="symbol-text">♘</div>
+                    <div class="symbol-name">马符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♙')">
+                    <div class="symbol-text">♙</div>
+                    <div class="symbol-name">兵符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♚')">
+                    <div class="symbol-text">♚</div>
+                    <div class="symbol-name">黑王符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♛')">
+                    <div class="symbol-text">♛</div>
+                    <div class="symbol-name">黑后符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♜')">
+                    <div class="symbol-text">♜</div>
+                    <div class="symbol-name">黑车符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♝')">
+                    <div class="symbol-text">♝</div>
+                    <div class="symbol-name">黑象符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♞')">
+                    <div class="symbol-text">♞</div>
+                    <div class="symbol-name">黑马符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('♟')">
+                    <div class="symbol-text">♟</div>
+                    <div class="symbol-name">黑兵符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('☀')">
+                    <div class="symbol-text">☀</div>
+                    <div class="symbol-name">太阳符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('☂')">
+                    <div class="symbol-text">☂</div>
+                    <div class="symbol-name">雨伞符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('☃')">
+                    <div class="symbol-text">☃</div>
+                    <div class="symbol-name">雪人符号</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">情侣/分组符号</h2>
+            <div class="symbols-grid">
+                <div class="symbol-card" onclick="copyToClipboard('✿❀')">
+                    <div class="symbol-text">✿❀</div>
+                    <div class="symbol-name">花语组合</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('❤️💛')">
+                    <div class="symbol-text">❤️💛</div>
+                    <div class="symbol-name">爱心组合</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('Ⓜ️Ⓡ')">
+                    <div class="symbol-text">Ⓜ️Ⓡ</div>
+                    <div class="symbol-name">字母组合</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+                <div class="symbol-card" onclick="copyToClipboard('☁️☂')">
+                    <div class="symbol-text">☁️☂</div>
+                    <div class="symbol-name">天气组合</div>
+                    <div class="copy-hint">点击复制</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>一键复制</h3>
+                    <p>无需手动选择，点击符号即可自动复制到剪贴板，方便快捷。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>全平台支持</h3>
+                    <p>适配QQ、微信、微博、游戏及各类社交平台，通用性强。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <h3>海量分类</h3>
+                    <p>涵盖爱心、星星、箭头、几何等多种类型，满足不同风格需求。</p>
+                </div>
+            </div>
+
+            <div class="guide-section">
+                <h2 class="section-title">如何使用符号</h2>
+                <div class="guide-steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div>
+                            <h3>浏览分类</h3>
+                            <p>在上方导航栏选择您喜欢的符号类型，如“爱心”、“星星”或“箭头”。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div>
+                            <h3>点击复制</h3>
+                            <p>找到心仪的符号卡片，点击即可自动复制该字符。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div>
+                            <h3>粘贴使用</h3>
+                            <p>切换到您的社交软件（如QQ、微信），在昵称或签名框中长按并选择“粘贴”即可。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于符号库</h4>
+                    <p style="font-size: 0.9rem; color: #b2bec3;">
+                        本站提供各类社交平台专用的个性符号、特殊字符及花字素材，致力于帮助用户打造独一无二的个人形象。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>常用分类</h4>
+                    <ul>
+                        <li><a href="#">QQ符号大全</a></li>
+                        <li><a href="#">微信昵称符号</a></li>
+                        <li><a href="#">王者荣耀符号</a></li>
+                        <li><a href="#">LOL符号</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">使用说明</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 符号库 All Rights Reserved. 仅供个人娱乐使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的复制到剪贴板功能
+        function copyToClipboard(text) {
+            // 创建临时输入框
+            const input = document.createElement('input');
+            input.setAttribute('value', text);
+            document.body.appendChild(input);
+            
+            // 选择并复制
+            input.select();
+            try {
+                document.execCommand('copy');
+                
+                // 提供用户反馈（非alert）
+                showToast(`已复制: ${text}`);
+            } catch (err) {
+                console.error('无法复制', err);
+            }
+            
+            // 清理
+            document.body.removeChild(input);
+        }
+
+        // 简单的 Toast 提示
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.style.position = 'fixed';
+            toast.style.bottom = '20px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.backgroundColor = 'rgba(0,0,0,0.8)';
+            toast.style.color = 'white';
+            toast.style.padding = '10px 20px';
+            toast.style.borderRadius = '20px';
+            toast.style.zIndex = '1000';
+            toast.style.fontSize = '14px';
+            toast.textContent = message;
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.5s';
+                setTimeout(() => document.body.removeChild(toast), 500);
+            }, 2000);
+        }
+
+        // 分类按钮交互效果
+        const catBtns = document.querySelectorAll('.cat-btn');
+        catBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                catBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // 这里可以添加筛选逻辑，目前仅做视觉交互
+            });
+        });
+    </script>
+</body>
+                  </html>
