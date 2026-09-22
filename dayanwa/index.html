@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="大眼蛙官方主页 - 沉浸式3D奇幻冒险游戏，探索神秘的魔法森林，收集稀有蛙类伙伴，体验独特的视觉风格与策略战斗。">
+    <meta name="keywords" content="大眼蛙, 3D游戏, 冒险, 魔法森林, 策略战斗, 手机游戏">
+    <title>大眼蛙 - 沉浸式3D奇幻冒险与策略战斗指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #8BC34A;
+            --accent-color: #FFEB3B;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #F9FBE7;
+            --bg-white: #FFFFFF;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #43A047;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 80px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 235, 59, 0.2);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-light);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background-color: var(--bg-white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        .feature-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            background: var(--bg-light);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Game World Section */
+        .game-world {
+            padding: 80px 20px;
+            background-color: var(--bg-light);
+        }
+
+        .world-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .world-image {
+            flex: 1;
+            min-width: 300px;
+            background: #e0e0e0;
+            border-radius: var(--radius);
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .world-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .world-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .world-content h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        .world-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .info-list {
+            margin-top: 30px;
+        }
+
+        .info-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        .info-list li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Characters Section */
+        .characters {
+            padding: 80px 20px;
+            background-color: var(--bg-white);
+        }
+
+        .character-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .char-card {
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .char-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .char-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .char-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .char-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .char-info span {
+            font-size: 13px;
+            color: var(--text-light);
+            background: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Download Section */
+        .download-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #43A047, #2E7D32);
+            color: white;
+            text-align: center;
+        }
+
+        .download-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .download-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .download-btn {
+            background-color: var(--accent-color);
+            color: #2E7D32;
+            padding: 16px 50px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 20px;
+            background-color: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--radius);
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #90A4AE;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #37474F;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">🐸 大眼蛙</div>
+            <nav>
+                <ul>
+                    <li><a href="#gameplay">游戏玩法</a></li>
+                    <li><a href="#world">世界观</a></li>
+                    <li><a href="#characters">伙伴图鉴</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#download" class="cta-btn">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探索奇幻森林，<br>成为大眼蛙守护者</h1>
+                <p>在充满魔法与冒险的“咕噜森林”中，收集稀有蛙类伙伴，组建你的专属战队，挑战巨兽，守护自然平衡。</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn-primary">免费下载游戏</a>
+                    <a href="#gameplay" class="btn-secondary">观看演示视频</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="gameplay" class="features">
+            <div class="section-header">
+                <h2>独特的游戏体验</h2>
+                <p>不仅仅是收集，更是一场策略与视觉的盛宴</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="icon-box">🌟</div>
+                    <h3>3D 精美画风</h3>
+                    <p>采用先进的 3D 渲染技术，呈现清新治愈的卡通风格，每一只大眼蛙都栩栩如生。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="icon-box">⚔️</div>
+                    <h3>策略战斗系统</h3>
+                    <p>结合元素克制与技能连招，考验玩家的战术布局，每一场战斗都是智慧的较量。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="icon-box">🌍</div>
+                    <h3>广阔开放世界</h3>
+                    <p>跨越迷雾森林、水晶洞穴与天空浮岛，探索未知的区域，发现隐藏的宝藏。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Game World Section -->
+        <section id="world" class="game-world">
+            <div class="world-container">
+                <div class="world-image">
+                    <img src="https://picsum.photos/seed/frogworld/600/400" alt="大眼蛙奇幻森林场景">
+                </div>
+                <div class="world-content">
+                    <h2>咕噜森林：魔法起源</h2>
+                    <p>在这个被遗忘的角落，大眼蛙们拥有与自然沟通的神秘天赋。它们不仅是森林的精灵，更是对抗暗影侵蚀的最后一道防线。玩家将扮演一名年轻的探险家，通过培养大眼蛙，逐步揭开森林被诅咒的真相。</p>
+                    <ul class="info-list">
+                        <li>独特的元素系统（水、火、草、土）</li>
+                        <li>实时天气影响战斗机制</li>
+                        <li>支持多人协作副本挑战</li>
+                        <li>丰富的剧情支线与结局选择</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characters Section -->
+        <section id="characters" class="characters">
+            <div class="section-header">
+                <h2>收集你的伙伴</h2>
+                <p>已有超过 50 种不同稀有度的大眼蛙等待被发现</p>
+            </div>
+            <div class="character-grid">
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/frog1/300/300" alt="翠绿大眼蛙" class="char-img">
+                    <div class="char-info">
+                        <h4>翠绿大眼蛙</h4>
+                        <span>稀有度: SR</span>
+                    </div>
+                </div>
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/frog2/300/300" alt="火焰大眼蛙" class="char-img">
+                    <div class="char-info">
+                        <h4>火焰大眼蛙</h4>
+                        <span>稀有度: SSR</span>
+                    </div>
+                </div>
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/frog3/300/300" alt="深海大眼蛙" class="char-img">
+                    <div class="char-info">
+                        <h4>深海大眼蛙</h4>
+                        <span>稀有度: R</span>
+                    </div>
+                </div>
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/frog4/300/300" alt="星光大眼蛙" class="char-img">
+                    <div class="char-info">
+                        <h4>星光大眼蛙</h4>
+                        <span>稀有度: UR</span>
+                    </div>
+                </div>
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/frog5/300/300" alt="岩石大眼蛙" class="char-img">
+                    <div class="char-info">
+                        <h4>岩石大眼蛙</h4>
+                        <span>稀有度: SR</span>
+                    </div>
+                </div>
+                <div class="char-card">
+                    <img src="https://picsum.photos/seed/frog6/300/300" alt="雷电大眼蛙" class="char-img">
+                    <div class="char-info">
+                        <h4>雷电大眼蛙</h4>
+                        <span>稀有度: SSR</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="section-header">
+                <h2>常见问题</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">大眼蛙支持哪些平台？</div>
+                    <div class="faq-answer">目前游戏支持 iOS 和 Android 系统，并计划在 2024 年推出 PC 版本。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">游戏是免费游玩的吗？</div>
+                    <div class="faq-answer">是的，游戏采用免费下载 + 内购道具的模式，基础内容完全免费。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何获取稀有的大眼蛙？</div>
+                    <div class="faq-answer">可以通过每日签到、活动副本、扭蛋系统以及特定的召唤仪式获得。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">游戏需要联网吗？</div>
+                    <div class="faq-answer">大部分玩法需要联网以同步数据，离线模式下可以进行部分养成操作。</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download CTA -->
+        <section id="download" class="download-section">
+            <h2>准备好开始冒险了吗？</h2>
+            <p>加入数百万玩家的行列，开启你的大眼蛙之旅</p>
+            <a href="#" class="download-btn">📲 下载 iOS 版本</a>
+            <a href="#" class="download-btn" style="background: white; color: #2E7D32; margin-left: 10px;">🤖 下载 Android 版本</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于大眼蛙</h4>
+                <p>我们致力于打造最治愈的 3D 手游体验，让每一位玩家都能在奇幻世界中找到属于自己的快乐。</p>
+            </div>
+            <div class="footer-col">
+                <h4>游戏指南</h4>
+                <ul>
+                    <li><a href="#">新手教程</a></li>
+                    <li><a href="#">战斗机制</a></li>
+                    <li><a href="#">伙伴图鉴</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>支持</h4>
+                <ul>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">服务条款</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <ul>
+                    <li><a href="#">官方微博</a></li>
+                    <li><a href="#">官方微信</a></li>
+                    <li><a href="#">玩家社区</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 大眼蛙游戏工作室. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                      </html>
