@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="力帆摩托车官方网站，提供力帆摩托车型展示、参数配置、购车指南及售后服务信息。致力于为消费者提供安全、环保的摩托车产品。">
+    <meta name="keywords" content="力帆摩托车,力帆摩托,力帆车行,摩托车品牌,力帆新品,力帆售后">
+    <title>力帆摩托车-品质出行与专业服务指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e60012; /* 力帆红 */
+            --secondary-color: #2c3e50;
+            --accent-color: #f39c12;
+            --bg-light: #f4f6f9;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --container-width: 1200px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: var(--text-main);
+            background-color: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #cc0010;
+            border-color: #cc0010;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            position: relative;
+            padding-left: 16px;
+            color: var(--secondary-color);
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            bottom: 4px;
+            width: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background-color: var(--secondary-color);
+            color: #fff;
+            font-size: 12px;
+            padding: 8px 0;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-main {
+            padding: 20px 0;
+        }
+
+        .header-main .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+            margin-left: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/motohero/1920/1080.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Feature Section */
+        .features {
+            padding: 60px 0;
+            background-color: var(--bg-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Models Section */
+        .models {
+            padding: 80px 0;
+        }
+
+        .model-tabs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            color: var(--text-light);
+            cursor: pointer;
+            white-space: nowrap;
+            border-radius: 4px;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+            background-color: rgba(230, 0, 18, 0.1);
+            font-weight: 600;
+        }
+
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .model-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .model-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        .model-image {
+            height: 220px;
+            width: 100%;
+            background-color: #eee;
+        }
+
+        .model-info {
+            padding: 24px;
+        }
+
+        .model-category {
+            font-size: 12px;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .model-info h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+        }
+
+        .model-specs {
+            display: flex;
+            justify-content: space-between;
+            margin: 16px 0;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .model-specs span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Buying Guide Section */
+        .guide {
+            background-color: var(--bg-light);
+            padding: 80px 0;
+        }
+
+        .guide-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .guide-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .guide-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .checklist li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--text-main);
+        }
+
+        .checklist li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .guide-image img {
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-light);
+            display: none;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .header-main .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+            .guide-content {
+                grid-template-columns: 1fr;
+            }
+            .header-top {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <span>24小时全国服务热线：400-888-8888</span>
+                <span>关注官方微信公众号：力帆摩托</span>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <a href="#" class="logo">力帆<span>摩托</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">首页</a></li>
+                        <li><a href="#models">车型展示</a></li>
+                        <li><a href="#guide">购车指南</a></li>
+                        <li><a href="#service">售后服务</a></li>
+                        <li><a href="#news">行业资讯</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#" class="btn btn-outline">登录</a>
+                    <a href="#" class="btn btn-primary">注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>驾驭未来，畅行无阻</h1>
+                    <p>力帆摩托车致力于为消费者提供高性能、高性价比的出行解决方案。无论是城市通勤还是长途旅行，力帆始终伴您左右。</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#models" class="btn btn-primary">查看车型</a>
+                        <a href="#guide" class="btn btn-outline" style="color: white; border-color: white;">购车咨询</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>强劲动力</h3>
+                        <p>搭载高效能发动机，动力输出平顺，油耗经济，满足日常及长途骑行需求。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>安全设计</h3>
+                        <p>标配ABS防抱死系统、碟刹制动及完善的灯光照明系统，保障骑行安全。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>专业售后</h3>
+                        <p>全国600+服务网点，专业技师团队，提供全方位维修保养与配件供应。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">♻️</div>
+                        <h3>绿色环保</h3>
+                        <p>严格执行排放标准，推出国四/国五排放车型，助力绿色低碳出行。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Models Section -->
+        <section id="models" class="models">
+            <div class="container">
+                <h2 class="section-title">热销车型推荐</h2>
+                
+                <div class="model-tabs">
+                    <button class="tab-btn active">全部车型</button>
+                    <button class="tab-btn">踏板车</button>
+                    <button class="tab-btn">街车</button>
+                    <button class="tab-btn">巡航车</button>
+                    <button class="tab-btn">越野车</button>
+                </div>
+
+                <div class="model-grid">
+                    <!-- Model 1 -->
+                    <article class="model-card">
+                        <div class="model-image">
+                            <img src="https://picsum.photos/seed/moto1/400/300.jpg" alt="力帆KPV150踏板车">
+                        </div>
+                        <div class="model-info">
+                            <span class="model-category">踏板车</span>
+                            <h3>力帆KPV150</h3>
+                            <p style="font-size: 14px; color: #666; margin-bottom: 10px;">时尚外观，智能大屏，适合城市通勤与休闲代步。</p>
+                            <div class="model-specs">
+                                <span>排量: 150cc</span>
+                                <span>油箱: 6.5L</span>
+                                <span>座高: 760mm</span>
+                            </div>
+                            <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">查看详情</a>
+                        </div>
+                    </article>
+
+                    <!-- Model 2 -->
+                    <article class="model-card">
+                        <div class="model-image">
+                            <img src="https://picsum.photos/seed/moto2/400/300.jpg" alt="力帆N150街车">
+                        </div>
+                        <div class="model-info">
+                            <span class="model-category">街车</span>
+                            <h3>力帆N150</h3>
+                            <p style="font-size: 14px; color: #666; margin-bottom: 10px;">运动姿态，低重心设计，操控灵活，骑行体验极佳。</p>
+                            <div class="model-specs">
+                                <span>排量: 149cc</span>
+                                <span>油箱: 12L</span>
+                                <span>座高: 780mm</span>
+                            </div>
+                            <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">查看详情</a>
+                        </div>
+                    </article>
+
+                    <!-- Model 3 -->
+                    <article class="model-card">
+                        <div class="model-image">
+                            <img src="https://picsum.photos/seed/moto3/400/300.jpg" alt="力帆KPV250巡航车">
+                        </div>
+                        <div class="model-info">
+                            <span class="model-category">巡航车</span>
+                            <h3>力帆KPV250</h3>
+                            <p style="font-size: 14px; color: #666; margin-bottom: 10px;">美式巡航风格，双缸引擎，沉稳大气，适合长途巡航。</p>
+                            <div class="model-specs">
+                                <span>排量: 249cc</span>
+                                <span>油箱: 14L</span>
+                                <span>座高: 720mm</span>
+                            </div>
+                            <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">查看详情</a>
+                        </div>
+                    </article>
+
+                     <!-- Model 4 -->
+                     <article class="model-card">
+                        <div class="model-image">
+                            <img src="https://picsum.photos/seed/moto4/400/300.jpg" alt="力帆KPV110越野车">
+                        </div>
+                        <div class="model-info">
+                            <span class="model-category">越野车</span>
+                            <h3>力帆KPV110</h3>
+                            <p style="font-size: 14px; color: #666; margin-bottom: 10px;">高离地间隙，强悍抓地力，应对复杂路况，玩转户外。</p>
+                            <div class="model-specs">
+                                <span>排量: 110cc</span>
+                                <span>油箱: 5.5L</span>
+                                <span>座高: 860mm</span>
+                            </div>
+                            <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">查看详情</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#" class="btn btn-outline">浏览所有车型</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buying Guide Section -->
+        <section id="guide" class="guide">
+            <div class="container">
+                <div class="guide-content">
+                    <div class="guide-text">
+                        <h2>如何选择适合您的力帆摩托车</h2>
+                        <p>购买摩托车是一项重要的投资，选择一款适合自己需求、预算和使用场景的车型至关重要。力帆提供多种系列车型，以满足不同用户的出行需求。</p>
+                        
+                        <ul class="checklist">
+                            <li><strong>确定用途：</strong>如果您主要在市区通勤，踏板车（如KPV150）是便捷的选择；如果您喜欢长途巡航或摩旅，N系列或KPV250巡航车更适合您。</li>
+                            <li><strong>考虑排量：</strong>排量决定了动力大小和油耗。150cc适合日常代步，250cc及以上则提供更充沛的动力储备。</li>
+                            <li><strong>身高适配：</strong>不同车型的座高不同，建议试骑，确保双脚能平稳着地，保证骑行安全。</li>
+                            <li><strong>排放标准：</strong>根据所在地区的环保法规，选择符合国四或国五排放标准的车辆。</li>
+                        </ul>
+                    </div>
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/motoguide/600/400.jpg" alt="力帆摩托车购车咨询">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">力帆摩托车的保修政策是怎样的？</div>
+                    <div class="faq-answer">
+                        <p>力帆摩托车通常提供整车保修2年或3万公里（以先到者为准），发动机保修3年或5万公里。具体保修条款以购车时签订的保修手册为准。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">在哪里可以购买到正品力帆摩托车？</div>
+                    <div class="faq-answer">
+                        <p>您可以通过力帆官方授权的各地经销商进行购买。建议在购买前通过官方网站查询距离您最近的授权门店地址及联系方式。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">新手上路需要注意哪些事项？</div>
+                    <div class="faq-answer">
+                        <p>新手上路必须考取相应的摩托车驾驶证（D/E照）。骑行时请佩戴合格的头盔、护具，遵守交通规则，不逆行、不超速，确保自身及他人安全。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">如何查询车辆的生产日期和合格证信息？</div>
+                    <div class="faq-answer">
+                        <p>每辆摩托车出厂时都会附带车辆合格证。您也可以通过车架号（VIN码）在力帆官方客服系统或相关车管所渠道进行查询验证。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于力帆</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">企业文化</a></li>
+                        <li><a href="#">社会责任</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>产品服务</h4>
+                    <ul>
+                        <li><a href="#models">踏板车系列</a></li>
+                        <li><a href="#models">街车系列</a></li>
+                        <li><a href="#models">巡航车系列</a></li>
+                        <li><a href="#service">售后服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客户支持</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">配件商城</a></li>
+                        <li><a href="#">骑行俱乐部</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：400-888-8888</li>
+                        <li>邮箱：service@lifan-moto.com</li>
+                        <li>地址：重庆市江津区德感工业园区</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 力帆摩托车 版权所有 | 渝ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Simple Tab Logic (Visual Only)
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', event => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                event.target.classList.add('active');
+            });
+        });
+    </script>
+</body>
+                  </html>
